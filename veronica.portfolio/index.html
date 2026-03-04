@@ -10,11 +10,12 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    background:#fffdf5;
     color:#333;
 }
 
@@ -22,110 +23,143 @@ body{
 nav{
     position:fixed;
     width:100%;
-    background:#ffffff;
-    padding:15px 10%;
+    background:#6a0dad;
+    padding:15px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-    z-index:1000;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
-nav h2{
-    color:#6a5acd;
+.logo{
+    font-weight:bold;
+    color:#ffd700;
+    font-size:20px;
 }
 
 nav ul{
     list-style:none;
     display:flex;
-    gap:25px;
+    gap:20px;
 }
 
-nav ul li a{
+nav a{
     text-decoration:none;
-    color:#333;
-    font-weight:500;
+    color:#ffffff;
+    font-size:14px;
     transition:0.3s;
 }
 
-nav ul li a:hover{
-    color:#6a5acd;
+nav a:hover{
+    color:#ffd700;
 }
 
-/* SECTIONS */
-section{
-    min-height:100vh;
-    padding:120px 10%;
-}
-
+/* HERO */
 .hero{
+    height:100vh;
     display:flex;
-    align-items:center;
-    justify-content:space-between;
+    flex-direction:column;
+    justify-content:center;
+    padding:0 8%;
+    background:linear-gradient(to right, #fff9c4, #e6ccff);
 }
 
-.hero-text h1{
-    font-size:48px;
-    color:#6a5acd;
+.hero h1{
+    font-size:42px;
+    color:#6a0dad;
 }
 
-.hero-text p{
+.hero p{
     margin-top:15px;
-    font-size:18px;
+    max-width:500px;
+    line-height:1.6;
 }
 
 .btn{
+    margin-top:25px;
     display:inline-block;
-    margin-top:20px;
-    padding:10px 20px;
-    background:#6a5acd;
-    color:white;
-    border-radius:25px;
+    padding:10px 22px;
+    background:#6a0dad;
+    color:#ffd700;
+    border-radius:20px;
     text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
     transition:0.3s;
 }
 
 .btn:hover{
-    background:#483d8b;
+    background:#4b0082;
 }
 
-/* ABOUT */
-.about{
-    background:#ffffff;
-    border-radius:15px;
-    padding:40px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+/* SECTIONS */
+section{
+    padding:100px 8%;
 }
 
-/* PROJECTS */
+.section-title{
+    font-size:28px;
+    margin-bottom:25px;
+    color:#6a0dad;
+    text-align:center;
+}
+
+/* CENTERED ABOUT */
+#about{
+    text-align:center;
+}
+
+#about p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.7;
+}
+
+/* HORIZONTAL PROJECTS */
 .projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    display:flex;
     gap:20px;
+    justify-content:space-between;
 }
 
 .card{
-    background:white;
+    background:#ffffff;
     padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    border-radius:12px;
+    border-left:6px solid #ffd700;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    flex:1;
     transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-5px);
 }
 
-/* CONTACT */
-.contact{
+/* CENTERED CONTACT */
+#contact{
     text-align:center;
 }
 
+.contact{
+    background:#fff9c4;
+    border-radius:15px;
+    padding:40px;
+    max-width:500px;
+    margin:auto;
+}
+
+.contact p{
+    margin:8px 0;
+}
+
+/* FOOTER */
 footer{
     text-align:center;
     padding:20px;
-    background:#6a5acd;
-    color:white;
+    background:#6a0dad;
+    color:#ffd700;
+    font-size:13px;
 }
 </style>
 </head>
@@ -133,60 +167,62 @@ footer{
 <body>
 
 <nav>
-    <h2>VMD</h2>
+    <div class="logo">Veronica Mae</div>
     <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
 <section class="hero" id="home">
-    <div class="hero-text">
-        <h1>Hello, I'm Veronica Mae</h1>
-        <p>Aspiring Architect | Student Leader | Creative Thinker</p>
-        <a href="#projects" class="btn">View My Work</a>
-    </div>
+    <h1>Konnichiwa, I’m Veronica! T^T</h1>
+    <p>
+        I'm a creative and passionate student who loves designing meaningful spaces and ideas. 
+        I dream of becoming an architect, someone who builds not just structures but environments that inspire people.
+    </p>
+    <a href="#projects" class="btn">View My Projects</a>
 </section>
 
 <section id="about">
-    <div class="about">
-        <h2>About Me</h2>
-        <p>
-        I am a passionate student from ICT strand who dreams of becoming an architect.
-        I love designing, drawing, and creating innovative ideas that can shape the future.
-        I believe that architecture is not just about buildings, but about designing dreams into reality.
-        </p>
-    </div>
+    <h2 class="section-title">About Me</h2>
+    <p>
+        I’m an ICT student who enjoys programming, research, and creative design. 
+        I believe every challenge is an opportunity to grow. My goal is to continuously 
+        improve my skills and turn my passion for architecture into reality.
+    </p>
 </section>
 
 <section id="projects">
-    <h2>My Projects</h2>
+    <h2 class="section-title">Projects</h2>
     <div class="projects">
         <div class="card">
-            <h3>School Leadership Project</h3>
-            <p>Organized student initiatives and led campaign strategies.</p>
-        </div>
-        <div class="card">
             <h3>Research Study</h3>
-            <p>Conducted qualitative research using phenomenological design.</p>
+            <p>Exploring students' lived experiences in debugging programming errors.</p>
         </div>
+
+        <div class="card">
+            <h3>Student Leadership</h3>
+            <p>Participated in organizing initiatives that promote collaboration and growth.</p>
+        </div>
+
         <div class="card">
             <h3>Creative Designs</h3>
-            <p>Personal architectural sketches and digital concepts.</p>
+            <p>Personal sketches and digital concepts inspired by architecture.</p>
         </div>
     </div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: veronicamae@email.com</p>
-    <p>GitHub: github.com/yourusername</p>
+<section id="contact">
+    <h2 class="section-title">Contacts</h2>
+    <div class="contact">
+        <p>Email: veronicamaedelacruz4@gmail.com</p>
+    </div>
 </section>
 
 <footer>
-    © 2026 Veronica Mae P. Dela Cruz | All Rights Reserved
+    © 2025 Veronica Mae P. Dela Cruz | Designed with passion
 </footer>
 
 </body>
